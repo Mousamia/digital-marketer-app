@@ -6,56 +6,39 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Header from './Components/Header/Header'
-import Home from './Components/Home/Home'
-import First from './Components/First/First'
+
+
+import Header from './Components/Header/Header';
 import About from './Components/About/About';
-import Second from './Second';
-import Friends from './Components/Friends/Friends';
-
-
+import Contact from './Components/Contact/Contact';
+import Home from './Components/Home/Home';
+import Photos from './Components/Friends/Friends';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Header></Header>  ,
+    element: <Home/>,
     children: [
       {
-        path: 'first',
-        element: <First></First>
-      },
-
-
-      {
-        path: 'second',
-        element:<Second></Second>
-      },
-
-      {
         path: 'about',
-        element:<About></About>
+        element: <About></About>
       },
-
+      {
+        path: 'contact',
+        element: <Contact></Contact>
+      },
       {
         path: 'friends',
-        element: <Friends></Friends>
+        element: <Photos/>,
+        loader: () => fetch('https://jsonplaceholder.typicode.com/photos')
       }
-
-
     ]
-  },
-  
-
-  {
-    path: 'home',
-    element: <Home></Home>
-  },
-
+  }
 ])
 
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-   <RouterProvider router={router}></RouterProvider>
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>,
 )

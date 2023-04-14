@@ -1,11 +1,23 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Friend from '../Friend/Friend';
 
-const Friends = () => {
+const Photos = () => {
+    const friendsPhoto = useLoaderData();
     return (
         <div>
-            My friends are .....
+            Thes are the Photos
+            <div className='grid grid-cols-3'>
+               
+                {
+                    friendsPhoto.slice(3, 10).map( friend => <Friend
+                        key={friend.id}
+                        friend={friend}
+                    ></Friend> )
+                }
+            </div>
         </div>
     );
 };
 
-export default Friends;
+export default Photos;
