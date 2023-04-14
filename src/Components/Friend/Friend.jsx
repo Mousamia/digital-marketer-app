@@ -1,15 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Friend = ({ friend }) => {
     console.log(friend);
-    const { albumId, tittle, url } = friend;
+    const { name, email, id ,phone } = friend;
     return (
-        <div>
-            <h2>
-                <span>{albumId}
-                </span> {tittle}
-            </h2>
-            <img src={url} alt="" />
+        <div className='border-4 border-purple-700 m-4 p-3'>
+            <h2 className='text-3xl font-bold'> {name} {id} </h2>
+            <h3 className='text-xl font-thin'> {email}</h3>
+            <h3> {phone} </h3>
+            <button>
+                <Link to={`/friend/${id}`}>
+                    How me deatils</Link>
+                
+            </button>
         </div>
     );
 };

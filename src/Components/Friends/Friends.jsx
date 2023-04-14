@@ -10,7 +10,7 @@ const Photos = () => {
             <div className='grid grid-cols-3'>
                
                 {
-                    friendsPhoto.slice(3, 10).map( friend => <Friend
+                    friendsPhoto.slice(0, 10).map( friend => <Friend
                         key={friend.id}
                         friend={friend}
                     ></Friend> )

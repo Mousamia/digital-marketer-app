@@ -13,6 +13,7 @@ import About from './Components/About/About';
 import Contact from './Components/Contact/Contact';
 import Home from './Components/Home/Home';
 import Photos from './Components/Friends/Friends';
+import FriendDetail from './Components/FriendDetail/FriendDetail';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -29,7 +30,11 @@ const router = createBrowserRouter([
       {
         path: 'friends',
         element: <Photos/>,
-        loader: () => fetch('https://jsonplaceholder.typicode.com/photos')
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users')
+      },
+      {
+        path: 'friend/:friendId',
+        element: <FriendDetail></FriendDetail>
       }
     ]
   }
