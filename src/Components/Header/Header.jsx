@@ -1,14 +1,16 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
+import ActiveLink from '../ActiveLink/ActiveLink';
 
 const Header = () => {
 
     return (
         <div>
             
-            <Link to='/about'>About</Link>
-            <Link to='/contact'>Contact</Link>
-            <Link to='/friends'>Friends</Link>
+            <ActiveLink to='/about'>About</ActiveLink>
+            <ActiveLink to='/contact'>Contact</ActiveLink>
+            <ActiveLink to='/friends'>Friends</ActiveLink>
+            <ActiveLink to='/posts'>Posts</ActiveLink>
             <h2>Thaats Fine</h2>
             <Outlet/>
         </div>
