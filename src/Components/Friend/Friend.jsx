@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Friend = ({ friend }) => {
-    console.log(friend);
+    // console.log(friend);
     const { name, email, id ,phone } = friend;
     return (
         <div className='border-4 border-purple-700 m-4 p-3'>
@@ -11,7 +11,7 @@ const Friend = ({ friend }) => {
             <h3> {phone} </h3>
             <button>
                 <Link to={`/friend/${id}`}>
-                    How me deatils</Link>
+                    Show me deatils</Link>
                 
             </button>
         </div>
