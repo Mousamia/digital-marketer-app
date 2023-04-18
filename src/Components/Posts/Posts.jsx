@@ -7,11 +7,14 @@ const Posts = () => {
     // console.log(posts);
     return (
         <div>
-            My Posts here
+            <h3 className="text-2xl text-yellow-800 flex justify-center">
+
+                Posts here
+            </h3>
             {
                 posts.map(post => <Post
-                key={post.id}
-                post={post}
+                    key={post.id}
+                    post={post}
 
                 ></Post>)
             }

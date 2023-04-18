@@ -6,16 +6,16 @@ import ActiveLink from '../ActiveLink/ActiveLink';
 const Header = () => {
 
     return (
-        <div className='flex justify-around'>
-            
+        <div className='grid grid-cols-1 space-y-5 ms-40'>
+
             <ActiveLink to='/about'>About</ActiveLink>
             <ActiveLink to='/contact'>Contact</ActiveLink>
             <ActiveLink to='/friends'>Friends</ActiveLink>
             <ActiveLink to='/posts'>Posts</ActiveLink>
-           <ActiveLink to='/shirts'>Tshirts</ActiveLink>
+            <ActiveLink to='/shirts'>Tshirts</ActiveLink>
 
-            
-            <Outlet/>
+
+            <Outlet />
         </div>
     );
 };
