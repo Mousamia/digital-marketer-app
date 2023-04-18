@@ -7,10 +7,10 @@ const Shirts = () => {
     console.log(shirts);
     return (
         <div>
-               <div className="grid grid-cols-3 mx-auto mt-5 justify-around">
+               <div className="grid grid-cols-3 mx-auto mt-4 justify-around">
                 {
                     shirts.map(shirt => <Shirt
-                    key={shirt.id}
+                    key={shirt._id}
                     shirt={shirt}
                     ></Shirt>)
                 }
