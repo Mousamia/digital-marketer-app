@@ -16,6 +16,7 @@ import Photos from './Components/Friends/Friends';
 import FriendDetail from './Components/FriendDetail/FriendDetail';
 import Posts from './Components/Posts/Posts';
 import PostDetail from './Components/PostDetail/PostDetail';
+import Shirts from './Components/Shirts/Shirts';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -52,6 +53,12 @@ const router = createBrowserRouter([
         path: 'posts/:postId',
         element: <PostDetail/>,
         loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+      },
+
+      {
+        path: 'shirts',
+        element: <Shirts/>,
+        loader: () => fetch(``)
       },
 
       {

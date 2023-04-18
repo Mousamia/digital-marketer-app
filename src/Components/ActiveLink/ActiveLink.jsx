@@ -13,7 +13,7 @@ const ActiveLink = ({ to, children}) => {
             >
                 {children}
               
-            </NavLink>;
+            </NavLink>
 
         </div>
     );

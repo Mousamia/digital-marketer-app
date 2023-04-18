@@ -2,16 +2,19 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import ActiveLink from '../ActiveLink/ActiveLink';
 
+
 const Header = () => {
 
     return (
-        <div>
+        <div className='flex justify-around'>
             
             <ActiveLink to='/about'>About</ActiveLink>
             <ActiveLink to='/contact'>Contact</ActiveLink>
             <ActiveLink to='/friends'>Friends</ActiveLink>
             <ActiveLink to='/posts'>Posts</ActiveLink>
-            <h2>Thaats Fine</h2>
+           <ActiveLink to='/shirts'>Tshirts</ActiveLink>
+
+            
             <Outlet/>
         </div>
     );
